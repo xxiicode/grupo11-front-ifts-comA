@@ -1,15 +1,19 @@
 /* -------------------------
-   Fuente y estilos globales
+   Fuentes y variables globales
 -------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap');
 
 :root {
-  --color-principal: #004aad;   /* azul principal */
-  --color-secundario: #f9f9f9;  /* fondo claro */
-  --color-texto: #333;
-  --color-acento: #ff6f00;      /* naranja para botones */
+  --color-principal: #0d0d0d;     /* Fondo principal oscuro */
+  --color-secundario: #111827;    /* Gris azulado oscuro */
+  --color-texto: #e5e7eb;          /* Gris claro para texto */
+  --color-acento: #ff6f00;         /* Naranja brillante para botones */
+  --color-borde: #222;
 }
 
+/* -------------------------
+   Estilos base
+-------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -17,89 +21,118 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--color-secundario);
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--color-principal);
   color: var(--color-texto);
   line-height: 1.6;
 }
 
 /* -------------------------
-   Encabezado
+   Títulos
 -------------------------- */
-header {
-  background: var(--color-principal);
-  color: white;
-  padding: 1.2rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
+h1, h2, h3, .titulo-principal {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
 /* -------------------------
-   Navegación
+   Header y navegación
 -------------------------- */
+header {
+  background: var(--color-secundario);
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
 nav {
-  background: var(--color-acento);
+  background: var(--color-principal);
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  padding: 0.8rem;
+  gap: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-borde);
 }
 
 nav a {
-  color: white;
+  color: var(--color-texto);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
   transition: 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--color-acento);
 }
 
 /* -------------------------
    Contenido principal
 -------------------------- */
 main {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 1rem;
-  text-align: center;
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 1rem;
 }
 
 /* -------------------------
-   Botones
+   Botones y tarjetas
 -------------------------- */
-button {
+button, .btn {
   background: var(--color-acento);
   border: none;
-  padding: 0.7rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 8px;
   color: white;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-button:hover {
+button:hover, .btn:hover {
   background: #e65c00;
+}
+
+.card {
+  background: var(--color-secundario);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* -------------------------
    Footer
 -------------------------- */
 footer {
-  background: var(--color-principal);
-  color: white;
+  background: var(--color-secundario);
+  color: #888;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-borde);
 }
 
 /* -------------------------
@@ -109,12 +142,16 @@ footer {
 /* Celulares pequeños */
 @media (max-width: 400px) {
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   nav {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  button, .btn {
+    width: 100%;
   }
 }
 
@@ -125,18 +162,13 @@ footer {
   }
 
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
 /* Escritorio grande */
 @media (min-width: 1200px) {
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
-}
-
-
-.align-center {
-  text-align: center;
 }
