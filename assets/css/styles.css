@@ -96,7 +96,7 @@ section h2 { margin-bottom: 1rem; }
   min-height: 360px;
   border-radius: 14px;
   overflow: hidden;
-  background: #000 url('../images/hero-section.webp') center/cover no-repeat;
+  background: #000 url('../img/hero-section.webp') center/cover no-repeat;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
@@ -152,7 +152,7 @@ section h2 { margin-bottom: 1rem; }
    Intro box
 -------------------------- */
 .section-intro {
-  background: url('../images/fondo-section.webp') center/cover no-repeat;
+  background: url('../img/fondo-section.webp') center/cover no-repeat;
   border-radius: 14px;
   padding: 2rem 1rem;
 }
