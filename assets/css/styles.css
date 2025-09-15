@@ -4,10 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap');
 
 :root {
-  --color-principal: #0d0d0d;     /* Fondo principal oscuro */
-  --color-secundario: #111827;    /* Gris azulado oscuro */
-  --color-texto: #e5e7eb;          /* Gris claro para texto */
-  --color-acento: #ff6f00;         /* Naranja brillante para botones */
+  --color-principal: #0d0d0d;
+  --color-secundario: #111827;
+  --color-texto: #e5e7eb;
+  --color-acento: #ff6f00;
   --color-borde: #222;
 }
 
@@ -27,9 +27,6 @@ body {
   line-height: 1.6;
 }
 
-/* -------------------------
-   Títulos
--------------------------- */
 h1, h2, h3, .titulo-principal {
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
@@ -38,43 +35,45 @@ h1, h2, h3, .titulo-principal {
 }
 
 /* -------------------------
-   Header y navegación
+   Layout: Header
 -------------------------- */
-header {
-  background: var(--color-secundario);
-  color: white;
-  padding: 1.2rem;
-  text-align: center;
-  border-bottom: 1px solid var(--color-borde);
-}
-
-header h1 {
-  font-size: 2.2rem;
-}
-
-nav {
-  background: var(--color-principal);
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(180deg, rgba(17,24,39,0.95) 0%, rgba(17,24,39,0.80) 100%);
   border-bottom: 1px solid var(--color-borde);
 }
 
-nav a {
+.logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.main-nav a {
   color: var(--color-texto);
   text-decoration: none;
   font-weight: 600;
-  font-family: 'Orbitron', sans-serif;
-  transition: 0.3s;
+  letter-spacing: 0.5px;
 }
 
-nav a:hover {
+.main-nav a:hover {
   color: var(--color-acento);
 }
 
 /* -------------------------
-   Contenido principal
+   Contenedor principal
 -------------------------- */
 main {
   max-width: 1200px;
@@ -87,28 +86,95 @@ section {
   text-align: center;
 }
 
-section h2 {
-  margin-bottom: 1rem;
+section h2 { margin-bottom: 1rem; }
+
+/* -------------------------
+   Hero
+-------------------------- */
+.hero {
+  position: relative;
+  min-height: 360px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000 url('../images/hero-section.webp') center/cover no-repeat;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.hero h1 span:first-child { margin-right: 1rem; }
+
+/* -------------------------
+   Tecnologías
+-------------------------- */
+.section-technologies { background: radial-gradient(ellipse at top, rgba(0,0,0,0.35), transparent 60%); }
+
+.tech-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 1rem 0 0.5rem;
+}
+
+.tech-item img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
 }
 
 /* -------------------------
-   Botones y tarjetas
+   Intro box
 -------------------------- */
-button, .btn {
-  background: var(--color-acento);
-  border: none;
-  padding: 0.7rem 1.4rem;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s;
+.section-intro {
+  background: url('../images/fondo-section.webp') center/cover no-repeat;
+  border-radius: 14px;
+  padding: 2rem 1rem;
 }
 
-button:hover, .btn:hover {
-  background: #e65c00;
+.intro-box {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(17,24,39,0.7);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.intro-box h3 { margin-bottom: 0.5rem; }
+
+/* -------------------------
+   Cards miembros
+-------------------------- */
+.section-cards .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
 }
 
 .card {
@@ -117,11 +183,67 @@ button:hover, .btn:hover {
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  border-color: rgba(255, 111, 0, 0.45);
+}
+
+.card-member {
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--color-texto);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-member img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  transition: transform 350ms ease, filter 350ms ease;
+}
+
+.card-member span {
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 300ms ease;
+}
+
+.card-member:hover img { transform: scale(1.06); filter: saturate(1.1) contrast(1.05); }
+.card-member:hover span { color: var(--color-acento); }
+
+/* Halo/glow sutil al hacer hover */
+.card-member::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(255,111,0,0.0);
+  transition: box-shadow 300ms ease;
+}
+
+.card-member:hover::after {
+  box-shadow: 0 0 0 2px rgba(255,111,0,0.35), 0 10px 30px rgba(255,111,0,0.15) inset;
+}
+
+/* -------------------------
+   Proyecto panel
+-------------------------- */
+.section-project .project-panel {
+  height: 220px;
+  border-radius: 14px;
+  background: rgba(17,24,39,0.7);
+  border: 1px solid var(--color-borde);
 }
 
 /* -------------------------
@@ -136,39 +258,18 @@ footer {
 }
 
 /* -------------------------
-   Responsive Design
+   Responsive
 -------------------------- */
-
-/* Celulares pequeños */
 @media (max-width: 400px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  button, .btn {
-    width: 100%;
-  }
+  .main-nav ul { gap: 0.75rem; }
+  .hero { min-height: 280px; }
 }
 
-/* Tablets */
 @media (min-width: 401px) and (max-width: 900px) {
-  main {
-    padding: 2rem;
-  }
-
-  header h1 {
-    font-size: 1.9rem;
-  }
+  main { padding: 2rem; }
 }
 
-/* Escritorio grande */
 @media (min-width: 1200px) {
-  header h1 {
-    font-size: 2.6rem;
-  }
+  .hero { min-height: 420px; }
 }
+

@@ -7,21 +7,91 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/307280f5a9.js" crossorigin="anonymous"></script>
-  <!-- Water.css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+  <!-- Opcional: resets/externos (no requeridos) -->
 </head>
 <body>
-  <!-- Contenido de la portada irá aquí -->
-  <!-- TODO: Diseñar en Figma antes de implementar -->
+  <!-- Header -->
+  <header class="site-header">
+    <a href="#inicio" class="logo">
+      <img src="assets/images/logo-inicio.webp" alt="TechVerse logo">
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#proyecto">Nuestro proyecto</a></li>
+        <li><a href="#miembros">Miembros</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section>
-    <h1 class="align-center">Hello Miau <i class="fa-solid fa-cat"></i></h1>
-  </section>
+  <main id="inicio">
+    <!-- Hero -->
+    <section class="hero" aria-label="Portada Hola Mundo">
+      <div class="hero__content">
+        <h1><span>Hola</span> <span>Mundo</span></h1>
+      </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="section-technologies">
+      <h2 class="titulo-principal">Tecnologías</h2>
+      <ul class="tech-list" role="list">
+        <li class="tech-item"><img src="assets/images/logo-html.webp" alt="HTML" title="HTML"></li>
+        <li class="tech-item"><img src="assets/images/logo-css.webp" alt="CSS" title="CSS"></li>
+        <li class="tech-item"><img src="assets/images/logo-javascript.webp" alt="JavaScript" title="JavaScript"></li>
+        <li class="tech-item"><img src="assets/images/logo-visual.webp" alt="Visual Studio Code" title="Visual Studio Code"></li>
+        <li class="tech-item"><img src="assets/images/logo-github.webp" alt="GitHub" title="GitHub"></li>
+      </ul>
+    </section>
+
+    <!-- Texto/Intro -->
+    <section class="section-intro">
+      <div class="intro-box">
+        <h3>¡Bienvenido a TechVerse!</h3>
+        <p>Un multiverso digital donde cada mundo tiene su estilo. ¡Elige tu portal y sumérgete en la experiencia de cada integrante!</p>
+      </div>
+    </section>
+
+    <!-- Cards de Miembros / Portales -->
+    <section id="miembros" class="section-cards">
+      <h2 class="titulo-principal">Portales de integrantes</h2>
+      <div class="cards-grid">
+        <a class="card card-member" href="pages/paula.html">
+          <img src="assets/images/card-Paula.webp" alt="Portal Paula">
+          <span>Paula</span>
+        </a>
+        <a class="card card-member" href="pages/martin.html">
+          <img src="assets/images/card-Martin.webp" alt="Portal Martin">
+          <span>Martin</span>
+        </a>
+        <a class="card card-member" href="pages/micaela.html">
+          <img src="assets/images/card-Micaela.webp" alt="Portal Micaela">
+          <span>Micaela</span>
+        </a>
+        <a class="card card-member" href="pages/leandro.html">
+          <img src="assets/images/card-Leandro.webp" alt="Portal Leandro">
+          <span>Leandro</span>
+        </a>
+        <a class="card card-member" href="pages/maria.html">
+          <img src="assets/images/card-Maria.webp" alt="Portal Maria">
+          <span>Maria</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Proyecto (placeholder) -->
+    <section id="proyecto" class="section-project">
+      <h2 class="titulo-principal">Nuestro proyecto</h2>
+      <div class="project-panel"></div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>© 2025 Grupo 11 - IFTS Com A</p>
+  </footer>
 
   <!-- scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
