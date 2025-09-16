@@ -273,3 +273,107 @@ footer {
   .hero { min-height: 420px; }
 }
 
+/* =========================
+   Página Leandro - estilo 8 bits
+   Scope: .page-leandro
+========================= */
+.page-leandro body {
+  background: #0b0e13;
+  color: #eaf2ff;
+  font-family: 'Press Start 2P', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  image-rendering: pixelated;
+}
+
+.page-leandro .retro-header {
+  max-width: 1100px;
+  margin: 1rem auto 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(#0f1522, #0a0f19);
+  border: 4px solid #1a2336;
+  outline: 4px solid #0b0e13;
+  box-shadow: 0 10px 0 #000;
+}
+
+.page-leandro .retro-back {
+  color: #9ad1ff;
+  text-decoration: none;
+}
+
+.page-leandro .retro-title {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.page-leandro .retro-container {
+  max-width: 1100px;
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+}
+
+.page-leandro .retro-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.25rem;
+  background: #0f1522;
+  border: 4px solid #1a2336;
+  outline: 6px solid #0b0e13;
+  box-shadow: 0 14px 0 #000;
+  padding: 1rem;
+  background-clip: padding-box;
+}
+
+.page-leandro .avatar-frame {
+  background: #0a0f19;
+  max-width: 600px;
+  border: 4px solid #223255;
+  outline: 4px solid #0b0e13;
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.page-leandro .avatar-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-leandro .retro-info {
+  text-align: left;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.page-leandro .retro-info .lbl {
+  color: #8be9fd;
+  background: #13203a;
+  padding: 0.25rem 0.4rem;
+  margin-right: 0.5rem;
+  border: 2px solid #294a7a;
+}
+
+.page-leandro .retro-section { margin-top: 1rem; }
+.page-leandro .retro-section h2 { margin: 0 0 0.5rem 0; font-size: 0.9rem; color: #ffd166; }
+
+.page-leandro .retro-list {
+  list-style: square inside;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.page-leandro .retro-list a { color: #9ad1ff; text-decoration: none; }
+.page-leandro .retro-list a:hover { text-decoration: underline; }
+
+.page-leandro .retro-footer {
+  text-align: center;
+  padding: 1.25rem 0;
+  color: #8aa6c1;
+}
+
+@media (max-width: 900px) {
+  .page-leandro .retro-card { grid-template-columns: 1fr; }
+}
+
