@@ -1,0 +1,70 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #2d004d, #ff0080);
+    color: #fff;
+}
+
+.tarjeta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px #ff00ff;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+#carrusel-img {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    transition: opacity 0.5s ease; /* <- fade suave */
+}
+
+.tarjeta h2 {
+    color: #00ffff;
+    text-shadow: 2px 2px #ff00ff;
+}
+
+.tarjeta a {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+.tarjeta a:hover {
+    text-decoration: underline;
+    color: #ff00ff;
+}
+
+/* Barra de navegación centrada */
+header {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.navbar {
+    display: inline-flex;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.navbar a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px #ff00ff;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffff00;
+}
