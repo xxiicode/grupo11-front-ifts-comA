@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leandro | Perfil</title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fuente pixel retro -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
   <header class="retro-header">
-    <a class="retro-back" href="../index.html">⟵ Volver</a>
-    <h1 class="retro-title">Leandro</h1>
+    <a class="retro-back" href="index.html">⟵ Volver</a>
+    <article><h1 class="retro-title">Leandro </h1> 
+      <img src="assets/img/coin.png" alt="Moneda" width="40" height="40">
+      <h1 id="levelup">10</h1>
+    </article>
   </header>
 
   <main class="retro-container">
@@ -21,7 +26,7 @@
       <div class="avatar-frame">
         <picture>
           <source media="(min-width: 901px)" srcset="assets/img/leandro-8bit-desktop.webp">
-          <img src="assets/img/leandro-8bit.webp" alt="Leandro en pixel art" />
+          <img title= "Click por monedas" class="clickable-photo" src="assets/img/leandro-8bit.webp" alt="Leandro en pixel art" />
         </picture>
       </div>
       <div class="retro-info">
@@ -65,6 +70,22 @@
   <footer class="retro-footer">
     <p>© 2025 Grupo 11 — Leandro</p>
   </footer>
+
+  <audio id="coin-sound" src="assets/mario-coin.mp3" preload="auto"></audio>
+
+  <script>
+    (function () {
+      const levelup = document.getElementById('levelup');
+      const img = document.querySelector('.avatar-frame .clickable-photo');
+      const audio = document.getElementById('coin-sound');
+      if (!img || !audio) return;
+      img.addEventListener('click', () => {
+        try { audio.currentTime = 0; } catch (e) {}
+        audio.play().catch(() => {});
+        levelup.textContent = parseInt(levelup.textContent) + 10;
+      });
+    })();
+  </script>
 </body>
 </html>
 
