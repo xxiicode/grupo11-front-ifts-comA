@@ -140,12 +140,25 @@
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
+  text-align: left; /* alineación de bullets y texto */
 }
 
 .decision-card.expanded .decision-content {
   padding: 1.5rem;
   max-height: 500px;
 }
+
+/* Bullets alineados correctamente */
+.decision-content ul {
+  list-style: disc inside; /* bullet clásico */
+  padding-left: 20px;      /* margen interno */
+  margin: 10px 0;          /* margen superior e inferior */
+}
+
+.decision-content ul li {
+  margin-bottom: 5px;      /* espacio entre items */
+}
+
 
 /* -------------------------
    Dificultades y soluciones
@@ -302,3 +315,5 @@
     align-self: center;
   }
 }
+
+
