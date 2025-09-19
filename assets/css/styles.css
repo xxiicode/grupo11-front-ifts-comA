@@ -27,6 +27,11 @@ body {
   line-height: 1.6;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3, .titulo-principal {
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
@@ -118,11 +123,15 @@ section h2 { margin-bottom: 1rem; }
 
 .hero h1 {
   font-size: clamp(2rem, 6vw, 5rem);
+  user-select: none;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
 .hero h1 span:first-child { margin-right: 1rem; }
+
+/* Color alternativo al hacer clic (JS toggles .is-colored) */
+.hero h1:hover { color: var(--color-acento); }
 
 /* -------------------------
    Tecnologías
@@ -148,6 +157,17 @@ section h2 { margin-bottom: 1rem; }
   filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
 }
 
+/* Estados interactivos tecnologías */
+.tech-item {
+  transition: transform 200ms ease, filter 200ms ease;
+}
+.tech-item.is-active img {
+  filter: drop-shadow(0 0 0 rgba(0,0,0,0)) brightness(1.2) saturate(1.25);
+}
+.section-technologies:hover .tech-item:not(.is-active) img {
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25)) brightness(0.9) saturate(0.9);
+}
+
 /* -------------------------
    Intro box
 -------------------------- */
@@ -171,6 +191,10 @@ section h2 { margin-bottom: 1rem; }
 /* -------------------------
    Cards miembros
 -------------------------- */
+
+#miembros {
+  scroll-margin-top: 80px;
+}
 .section-cards .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -241,6 +265,7 @@ section h2 { margin-bottom: 1rem; }
 -------------------------- */
 .section-project .project-panel {
   height: 220px;
+  align-content: center;
   border-radius: 14px;
   background: rgba(17,24,39,0.7);
   border: 1px solid var(--color-borde);
