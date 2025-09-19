@@ -382,6 +382,11 @@ footer {
   }
 }
 
+h1#levelup {
+    text-align: right;
+    min-width: 45px;
+}
+
 .page-leandro .retro-container {
   max-width: 1100px;
   margin: 1rem auto 2rem;
