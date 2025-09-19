@@ -1,7 +1,7 @@
 /* -------------------------
    Fuentes y variables globales
 -------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap");
 
 :root {
   --color-principal: #0d0d0d;
@@ -21,19 +21,21 @@
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   background-color: var(--color-principal);
   color: var(--color-texto);
   line-height: 1.6;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, .titulo-principal {
-  font-family: 'Orbitron', sans-serif;
+h1,
+h2,
+h3,
+.titulo-principal {
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
@@ -50,7 +52,11 @@ h1, h2, h3, .titulo-principal {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  background: linear-gradient(180deg, rgba(17,24,39,0.95) 0%, rgba(17,24,39,0.80) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 0.95) 0%,
+    rgba(17, 24, 39, 0.8) 100%
+  );
   border-bottom: 1px solid var(--color-borde);
 }
 
@@ -91,7 +97,9 @@ section {
   text-align: center;
 }
 
-section h2 { margin-bottom: 1rem; }
+section h2 {
+  margin-bottom: 1rem;
+}
 
 /* -------------------------
    Hero
@@ -101,15 +109,19 @@ section h2 { margin-bottom: 1rem; }
   min-height: 360px;
   border-radius: 14px;
   overflow: hidden;
-  background: #000 url('../img/hero-section.webp') center/cover no-repeat;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  background: #000 url("../img/hero-section.webp") center/cover no-repeat;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }
 
 .hero__content {
@@ -128,15 +140,25 @@ section h2 { margin-bottom: 1rem; }
   letter-spacing: 4px;
 }
 
-.hero h1 span:first-child { margin-right: 1rem; }
+.hero h1 span:first-child {
+  margin-right: 1rem;
+}
 
 /* Color alternativo al hacer clic (JS toggles .is-colored) */
-.hero h1:hover { color: var(--color-acento); }
+.hero h1:hover {
+  color: var(--color-acento);
+}
 
 /* -------------------------
    Tecnologías
 -------------------------- */
-.section-technologies { background: radial-gradient(ellipse at top, rgba(0,0,0,0.35), transparent 60%); }
+.section-technologies {
+  background: radial-gradient(
+    ellipse at top,
+    rgba(0, 0, 0, 0.35),
+    transparent 60%
+  );
+}
 
 .tech-list {
   list-style: none;
@@ -154,7 +176,7 @@ section h2 { margin-bottom: 1rem; }
   width: 44px;
   height: 44px;
   object-fit: contain;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
 }
 
 /* Estados interactivos tecnologías */
@@ -162,17 +184,18 @@ section h2 { margin-bottom: 1rem; }
   transition: transform 200ms ease, filter 200ms ease;
 }
 .tech-item.is-active img {
-  filter: drop-shadow(0 0 0 rgba(0,0,0,0)) brightness(1.2) saturate(1.25);
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) brightness(1.2) saturate(1.25);
 }
 .section-technologies:hover .tech-item:not(.is-active) img {
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25)) brightness(0.9) saturate(0.9);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25)) brightness(0.9)
+    saturate(0.9);
 }
 
 /* -------------------------
    Intro box
 -------------------------- */
 .section-intro {
-  background: url('../img/fondo-section.webp') center/cover no-repeat;
+  background: url("../img/fondo-section.webp") center/cover no-repeat;
   border-radius: 14px;
   padding: 2rem 1rem;
 }
@@ -180,13 +203,15 @@ section h2 { margin-bottom: 1rem; }
 .intro-box {
   max-width: 720px;
   margin: 0 auto;
-  background: rgba(17,24,39,0.7);
+  background: rgba(17, 24, 39, 0.7);
   border: 1px solid var(--color-borde);
   border-radius: 12px;
   padding: 1.5rem;
 }
 
-.intro-box h3 { margin-bottom: 0.5rem; }
+.intro-box h3 {
+  margin-bottom: 0.5rem;
+}
 
 /* -------------------------
    Cards miembros
@@ -207,13 +232,14 @@ section h2 { margin-bottom: 1rem; }
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: transform 300ms ease, box-shadow 300ms ease,
+    border-color 300ms ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
   border-color: rgba(255, 111, 0, 0.45);
 }
 
@@ -242,8 +268,13 @@ section h2 { margin-bottom: 1rem; }
   transition: color 300ms ease;
 }
 
-.card-member:hover img { transform: scale(1.06); filter: saturate(1.1) contrast(1.05); }
-.card-member:hover span { color: var(--color-acento); }
+.card-member:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.1) contrast(1.05);
+}
+.card-member:hover span {
+  color: var(--color-acento);
+}
 
 /* Halo/glow sutil al hacer hover */
 .card-member::after {
@@ -252,12 +283,13 @@ section h2 { margin-bottom: 1rem; }
   inset: 0;
   border-radius: 12px;
   pointer-events: none;
-  box-shadow: 0 0 0 0 rgba(255,111,0,0.0);
+  box-shadow: 0 0 0 0 rgba(255, 111, 0, 0);
   transition: box-shadow 300ms ease;
 }
 
 .card-member:hover::after {
-  box-shadow: 0 0 0 2px rgba(255,111,0,0.35), 0 10px 30px rgba(255,111,0,0.15) inset;
+  box-shadow: 0 0 0 2px rgba(255, 111, 0, 0.35),
+    0 10px 30px rgba(255, 111, 0, 0.15) inset;
 }
 
 /* -------------------------
@@ -267,7 +299,7 @@ section h2 { margin-bottom: 1rem; }
   height: 220px;
   align-content: center;
   border-radius: 14px;
-  background: rgba(17,24,39,0.7);
+  background: rgba(17, 24, 39, 0.7);
   border: 1px solid var(--color-borde);
 }
 
@@ -286,16 +318,24 @@ footer {
    Responsive
 -------------------------- */
 @media (max-width: 400px) {
-  .main-nav ul { gap: 0.75rem; }
-  .hero { min-height: 280px; }
+  .main-nav ul {
+    gap: 0.75rem;
+  }
+  .hero {
+    min-height: 280px;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 900px) {
-  main { padding: 2rem; }
+  main {
+    padding: 2rem;
+  }
 }
 
 @media (min-width: 1200px) {
-  .hero { min-height: 420px; }
+  .hero {
+    min-height: 420px;
+  }
 }
 
 /* =========================
@@ -305,7 +345,9 @@ footer {
 .page-leandro body {
   background: #0b0e13;
   color: #eaf2ff;
-  font-family: 'Press Start 2P', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Press Start 2P", system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   image-rendering: pixelated;
 }
 
@@ -320,6 +362,11 @@ footer {
   border: 4px solid #1a2336;
   outline: 4px solid #0b0e13;
   box-shadow: 0 10px 0 #000;
+  & article {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 .page-leandro .retro-back {
@@ -330,6 +377,9 @@ footer {
 .page-leandro .retro-title {
   margin: 0;
   letter-spacing: 2px;
+  & img {
+    vertical-align: middle;
+  }
 }
 
 .page-leandro .retro-container {
@@ -362,8 +412,10 @@ footer {
 
 .page-leandro .avatar-frame img {
   width: 100%;
+  max-width: 450px;
   height: auto;
   display: block;
+  cursor: pointer;
 }
 
 .page-leandro .retro-info {
@@ -380,8 +432,14 @@ footer {
   border: 2px solid #294a7a;
 }
 
-.page-leandro .retro-section { margin-top: 1rem; }
-.page-leandro .retro-section h2 { margin: 0 0 0.5rem 0; font-size: 0.9rem; color: #ffd166; }
+.page-leandro .retro-section {
+  margin-top: 1rem;
+}
+.page-leandro .retro-section h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ffd166;
+}
 
 .page-leandro .retro-list {
   list-style: square inside;
@@ -389,8 +447,13 @@ footer {
   gap: 0.35rem;
 }
 
-.page-leandro .retro-list a { color: #9ad1ff; text-decoration: none; }
-.page-leandro .retro-list a:hover { text-decoration: underline; }
+.page-leandro .retro-list a {
+  color: #9ad1ff;
+  text-decoration: none;
+}
+.page-leandro .retro-list a:hover {
+  text-decoration: underline;
+}
 
 .page-leandro .retro-footer {
   text-align: center;
@@ -398,7 +461,15 @@ footer {
   color: #8aa6c1;
 }
 
-@media (max-width: 900px) {
-  .page-leandro .retro-card { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .page-leandro .retro-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
+@media (max-width: 900px) {
+  .page-leandro .retro-card {
+    grid-template-columns: 1fr;
+  }
+}
