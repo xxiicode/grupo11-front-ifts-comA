@@ -278,13 +278,13 @@
   }
   
   .timeline-item::before {
-    left: 20px;
+    left: 10px;
     transform: translateY(-50%);
   }
   
   .timeline-content {
-    width: calc(100% - 60px);
-    margin-left: 60px !important;
+    width: calc(100% - 70px);
+    margin-left: 70px !important;
   }
   
   .change-item {
