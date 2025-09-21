@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Zalando Sans SemiExpanded", sans-serif;  
+  line-height: 1.6;
+}
+
+/* HEADER+HERO */
+.header-hero {  
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(/assets/img/fondo-tech.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px 0px 40px;
+}
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;  
+}
+.header .main-nav ul li a {
+  color: rgb(240, 234, 234);
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.header .main-nav ul li a:hover {
+  color: rgb(58, 213, 252); 
+}
+/* Hero */
+.hero { 
+  flex: 1;                        
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;         
+  align-items: center;          
+  text-align: center;  
+  gap: 1rem;
+}
+
+h1 {    
+  color: aliceblue;
+  font-size: 4rem;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {    
+  color: rgb(194, 178, 233);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+h3 {
+  color: rgb(194, 178, 233);  
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: #4118b1;
+  border-radius: 40px;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* --- Botones --- */
+
+.hero-buttons .btn {
+  background-color: #00eaff;       
+  color: #000;                    
+  padding: 1rem 2rem;
+  margin: 10px;
+  border-radius: 20px;             
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.hero-buttons .btn:hover {
+  color: aliceblue;
+  background-color: #8b21ee;     
+  transform: scale(1.05);
+}
+
+.hero-buttons .btn-volver {
+  background: transparent;
+  border: 1px solid #00eaff;       
+  color: #00eaff;                  
+  padding: 1rem 2rem;
+  border-radius: 20px;            
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;  
+}
+
+.hero-buttons .btn-volver:hover {
+ 
+  color:#ffffff;                 
+  transform: scale(1.05);
+    border: 1px solid #ffffff; 
+}
+
+/* INTERESES */
+.intereses {
+  overflow: hidden;          
+  white-space: nowrap;       
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000000;
+}
+
+.intereses-content {
+  display: inline-flex;
+  gap: 40px;                 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scroll 20s linear infinite;
+}
+
+.intereses-content li img {
+  width: 80px;   
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.intereses-content li img:hover {
+  transform: scale(1.2);  
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40%); 
+  }
+}
+
+/* INFO SOBRE MI */
+
+.info {
+  background-image: url(/assets/img/fondo-coders.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;  
+}
+
+.card-content {
+width: 50%;
+padding: 1.5rem;
+}
+@media (max-width: 900px) {
+  .card-content {
+    width: 90%;
+  }
+}
+
+.card-content ul {
+  list-style: none;  
+  margin-left: 2rem;
+  margin-top: 2rem;
+  }
+
+.card-content ul li {
+  color: azure;
+  font-weight: 100;
+  font-size: 20px; 
+  padding: 3px;  
+}
+
+/* PELICULAS*/
+
+#peliculas {
+  padding: 50px;
+  text-align: center;  
+}
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+/* Pantallas medianas (<=1200px) → 2 columnas */
+@media (max-width: 1200px) {
+  .peliculas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Pantallas chicas (<=900px) → 1 columna */
+@media (max-width: 900px) {
+  .peliculas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #57b3ff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: auto;  
+}
+@media (max-width: 900px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+
+.card img {
+  width: 100%;
+  height: 90%;
+  display: block;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.card.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffffff;
+}
