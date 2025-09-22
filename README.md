@@ -49,6 +49,8 @@ La propuesta estética se inspira en un multiverso digital retro-futurista, dond
       - Interacción de tarjetas: al hacer clic sobre cada pelicula, se resalta con un efecto de agrandamiento y sombra.
    - **MARIA (maria.js)**
    - **MICAELA (mica-script.js)**
+      - Integración de efectos de audio en navegación, secciones y enlaces externos.
+      - Animación glow en el encabezado y feedback sonoro al interactuar con el avatar.
 
 ## Enlaces
 - **Repositorio GitHub**: [\[link al repo\] ](https://github.com/xxiicode/grupo11-front-ifts-comA) 
