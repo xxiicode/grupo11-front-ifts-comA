@@ -1,10 +1,5 @@
 const sonidos = {
-  bienvenida: 'assets/sounds/open-door.mp3',
-  volver: 'assets/sounds/close-door.mp3',
-  habilidades: 'assets/sounds/click1.mp3',
-  peliculas: 'assets/sounds/click2.mp3',
   box: 'assets/sounds/click3.mp3',
-  enlace: 'assets/sounds/bubble.mp3',
   avatar: 'assets/sounds/click1.mp3'
 };
 
