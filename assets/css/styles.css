@@ -135,12 +135,8 @@ section h2 { margin-bottom: 1rem; }
   padding: 1rem 0 0.5rem;
   display: flex;
   gap: 2rem; 
-  animation: scroll 20s linear infinite; 
-}
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* mover la mitad, por eso duplicamos logos */
-}
+ }
+
 
 
 
