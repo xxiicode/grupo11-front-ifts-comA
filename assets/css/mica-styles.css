@@ -230,7 +230,7 @@ header {
 .seccion li {
   background: #7C4585;
   margin-bottom: 8px;
-  padding: 8px 15px;
+  padding: 5px 15px;
   border-radius: 10px;
   border-left: 4px solid #C95792;
   transition: all 0.3s ease;
