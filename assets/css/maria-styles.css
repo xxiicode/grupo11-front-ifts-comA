@@ -163,7 +163,7 @@ footer {
 /* Móviles pequeños */
 @media (max-width: 600px) {
   body { padding: 10px; }
-  .tarjeta-maria { width: 520px; height: 1000px; }
+  .tarjeta-maria { width: 320px; height: 1000px; }
   .avatar-container { width: 200px; height: 250px; }
   .contenido h2 { font-size: 1.8rem; }
   .box{flex-direction: column-reverse; }
