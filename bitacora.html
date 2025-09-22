@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora | Grupo 11</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bitacora.css">
+  <script src="https://kit.fontawesome.com/307280f5a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-inicio.webp" alt="TechVerse logo">
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#decisiones">Decisiones</a></li>
+        <li><a href="#dificultades">Dificultades</a></li>
+        <li><a href="#cambios">Cambios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Bitácora -->
+    <section class="hero-bitacora" aria-label="Bitácora del Proyecto">
+      <div class="hero__content">
+        <h1>Bitácora de Desarrollo</h1>
+        <p>Registro del proceso de creación del TechVerse</p>
+      </div>
+    </section>
+
+    <!-- Timeline de Progreso -->
+    <section class="timeline-section">
+      <h2 class="titulo-principal">Línea de Tiempo del Proyecto</h2>
+      <div class="timeline-container">
+        <div class="timeline-item" data-date="01/09/25">
+          <div class="timeline-content">
+            <h3>🚀 Inicio del Proyecto</h3>
+            <p>Lanzamiento del TP1 y formación del equipo Grupo 11.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-date="05/09/25">
+          <div class="timeline-content">
+            <h3>🎨 Concepto Creativo</h3>
+            <p>Definición del concepto "multiverso digital retro-futurista".</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-date="12/09/25">
+          <div class="timeline-content">
+            <h3>⚡ Desarrollo Activo</h3>
+            <p>Implementación de estilos individuales y funcionalidades JS.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-date="22/09/25">
+          <div class="timeline-content">
+            <h3>✅ Entrega Final</h3>
+            <p>Deploy en Vercel y entrega del proyecto completado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decisiones de Diseño -->
+    <section id="decisiones" class="bitacora-section">
+      <div class="intro-box">
+        <h2 class="titulo-principal">Decisiones de Diseño</h2>
+        <div class="decision-grid">
+          <div class="decision-card expandable" onclick="toggleCard(this)">
+            <div class="decision-header">
+              <i class="fas fa-palette"></i>
+              <h3>Estética Multiverso</h3>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="decision-content">
+              <p>Decidimos implementar un concepto de "multiverso digital" donde cada integrante tiene su propio estilo visual:</p>
+              <ul>
+                <li><strong>Leandro:</strong> Estética 8-bits retro con fuente pixelada</li>
+                <li><strong>Martin:</strong> Estilo retro años 80 con neones</li>
+                <li><strong>Portada:</strong> Diseño tech moderno con gradientes oscuros</li>
+              </ul>
+              <p>Esta decisión permite mostrar diversidad creativa manteniendo coherencia conceptual.</p>
+            </div>
+          </div>
+
+          <div class="decision-card expandable" onclick="toggleCard(this)">
+            <div class="decision-header">
+              <i class="fas fa-code"></i>
+              <h3>Estructura CSS</h3>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="decision-content">
+              <p>Optamos por un archivo CSS unificado con secciones específicas:</p>
+              <ul>
+                <li>Variables CSS para colores principales</li>
+                <li>Estilos base compartidos</li>
+                <li>Clases específicas por página (.page-leandro)</li>
+                <li>Sistema de grid responsive con breakpoints definidos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="decision-card expandable" onclick="toggleCard(this)">
+            <div class="decision-header">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Responsive Design</h3>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="decision-content">
+              <p>Implementamos breakpoints específicos según los requerimientos:</p>
+              <ul>
+                <li><strong>400px:</strong> Dispositivos móviles pequeños</li>
+                <li><strong>900px:</strong> Tablets y pantallas medianas</li>
+                <li><strong>1200px:</strong> Pantallas de escritorio grandes</li>
+              </ul>
+              <p>Utilizamos CSS Grid y Flexbox para layouts adaptables.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dificultades Encontradas -->
+    <section id="dificultades" class="bitacora-section">
+      <div class="intro-box">
+        <h2 class="titulo-principal">Dificultades y Soluciones</h2>
+        <div class="challenge-list">
+          <div class="challenge-item">
+            <div class="challenge-icon">⚠️</div>
+            <div class="challenge-content">
+              <h3>Rutas de archivos</h3>
+              <p><strong>Problema:</strong> Inconsistencias en las rutas de archivos CSS y JS entre diferentes páginas.</p>
+              <p><strong>Solución:</strong> Estandarización de rutas relativas desde la raíz del proyecto, usando "../" para páginas individuales.</p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <div class="challenge-icon">🎨</div>
+            <div class="challenge-content">
+              <h3>Consistencia visual</h3>
+              <p><strong>Problema:</strong> Mantener coherencia entre estilos individuales diversos.</p>
+              <p><strong>Solución:</strong> Establecimiento de elementos comunes (header, navegación) y paleta de colores base compartida.</p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <div class="challenge-icon">📱</div>
+            <div class="challenge-content">
+              <h3>Responsive en diferentes estilos</h3>
+              <p><strong>Problema:</strong> Adaptar diseños retro y pixel art a dispositivos móviles.</p>
+              <p><strong>Solución:</strong> Grid layouts flexibles y ajustes específicos por breakpoint en cada estilo.</p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <div class="challenge-icon">⚡</div>
+            <div class="challenge-content">
+              <h3>JavaScript condicional</h3>
+              <p><strong>Problema:</strong> Evitar errores cuando elementos específicos no existen en todas las páginas.</p>
+              <p><strong>Solución:</strong> Verificación de existencia de elementos antes de aplicar funcionalidades (if statements).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cambios Importantes -->
+    <section id="cambios" class="bitacora-section">
+      <div class="intro-box">
+        <h2 class="titulo-principal">Cambios Durante el Desarrollo</h2>
+        <div class="changes-timeline">
+          <div class="change-item">
+            <div class="change-date">Semana 1</div>
+            <div class="change-content">
+              <h3>📋 Estructura Inicial</h3>
+              <p>Cambio de estructura simple a concepto multiverso. Inicialmente pensábamos en un diseño uniforme para todo el sitio.</p>
+            </div>
+          </div>
+
+          <div class="change-item">
+            <div class="change-date">Semana 2</div>
+            <div class="change-content">
+              <h3>🔧 Refactorización CSS</h3>
+              <p>Migración de múltiples archivos CSS a un sistema unificado con secciones específicas por página.</p>
+            </div>
+          </div>
+
+          <div class="change-item">
+            <div class="change-date">Semana 3</div>
+            <div class="change-content">
+              <h3>✨ Mejoras en JavaScript</h3>
+              <p>Implementación del efecto scramble text en el hero y optimización de funciones condicionales.</p>
+            </div>
+          </div>
+
+          <div class="change-item">
+            <div class="change-date">Final</div>
+            <div class="change-content">
+              <h3>🚀 Optimización Final</h3>
+              <p>Ajustes de performance, validación de rutas y testing en diferentes dispositivos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estadísticas del Proyecto -->
+    <section class="stats-section">
+      <h2 class="titulo-principal">Estadísticas del Proyecto</h2>
+      <div class="stats-grid">
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">Páginas HTML</div>
+        </div>
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-label">Archivos CSS</div>
+        </div>
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-label">Scripts JS</div>
+        </div>
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Imágenes Optimizadas</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Grupo 11 - IFTS Com A | Bitácora de Desarrollo TP1</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bitacora.js"></script>
+</body>
+</html>
+
+

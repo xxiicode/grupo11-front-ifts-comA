@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" class="page-leandro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leandro | Perfil</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fuente pixel retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header class="retro-header">
+    <a class="retro-back" href="index.html">⟵ Volver</a>
+    <article><h1 class="retro-title">Leandro </h1> 
+      <img src="assets/img/coin.png" alt="Moneda" width="40" height="40">
+      <h1 id="levelup">10</h1>
+    </article>
+  </header>
+
+  <main class="retro-container">
+    <section class="retro-card">
+      <div class="avatar-frame">
+        <picture>
+          <source media="(min-width: 901px)" srcset="assets/img/leandro-8bit-desktop.webp">
+          <img title= "Click por monedas" class="clickable-photo" src="assets/img/leandro-8bit.webp" alt="Leandro en pixel art" />
+        </picture>
+      </div>
+      <div class="retro-info">
+        <p><span class="lbl">Nombre</span> <span class="val">Lean</span></p>
+        <p><span class="lbl">Ubicación</span> <span class="val">Camarones</span></p>
+        <p><span class="lbl">Edad</span> <span class="val">38</span></p>
+
+        <div class="retro-section">
+          <h2>Habilidades</h2>
+          <ul class="retro-list">
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>n8n</li>
+            <li>Design systems</li>
+            <li>Deployment</li>
+          </ul>
+        </div>
+
+        <div class="retro-section">
+          <h2>Películas favoritas</h2>
+          <ul class="retro-list">
+            <li><a target="_blank" rel="noopener" href="https://www.imdb.com/title/tt5004766/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_birdboy">Birdboy</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.imdb.com/title/tt0094625/?ref_=nv_sr_srsg_3_tt_3_nm_5_in_0_q_akira">Akira</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.imdb.com/title/tt0831888/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_tekk">Tekkonkinkreet</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.imdb.com/title/tt4302938/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_kubo">Kubo and the Two Strings</a></li>
+          </ul>
+        </div>
+
+        <div class="retro-section">
+          <h2>Música favorita</h2>
+          <ul class="retro-list">
+            <li>Ciudad de Brahman (1999)<br>— Los Natas</li>
+            <li>The Power to Believe (2003)<br>— King Crimson</li>
+            <li>Entre dos aguas (1981)<br>— Paco de Lucía</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="retro-footer">
+    <p>© 2025 Grupo 11 — Leandro</p>
+  </footer>
+
+  <audio id="coin-sound" src="assets/mario-coin.mp3" preload="auto"></audio>
+
+  <script>
+    (function () {
+      const levelup = document.getElementById('levelup');
+      const img = document.querySelector('.avatar-frame .clickable-photo');
+      const audio = document.getElementById('coin-sound');
+      if (!img || !audio) return;
+      img.addEventListener('click', () => {
+        try { audio.currentTime = 0; } catch (e) {}
+        audio.play().catch(() => {});
+        levelup.textContent = parseInt(levelup.textContent) + 10;
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
