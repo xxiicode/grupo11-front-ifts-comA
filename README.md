@@ -35,14 +35,20 @@ La propuesta estética se inspira en un multiverso digital retro-futurista, dond
 - `README.md`: documentación principal del proyecto.  
 
 ## Funcionalidades con JavaScript
-- **Portada (index.html)**  
+- **PÁGINA PRINCIPAL**
   - *Efecto Scramble Text*: el título "Hola Mundo" cambia dinámicamente entre frases en distintos idiomas con animación de texto desordenado.  
-  - *Parallax ligero*: interacción visual en la sección hero.  
-
-- **Páginas individuales**  
+  - *Parallax ligero*: interacción visual en la sección hero.
   - *Animación de aparición de tarjeta* (`presentacion.js`): las tarjetas se muestran con un efecto de fade-in y desplazamiento.  
-  - *Resaltado de habilidades*: al pasar el mouse sobre cada habilidad, cambia de color y estilo para destacarla.  
-  - *Carrusel de imágenes (martin.html)*: cambia entre imágenes de películas favoritas con un efecto de desvanecimiento automático.  
+  
+  - **LEANDRO**
+      *Resaltado de habilidades*: al pasar el mouse sobre cada habilidad, cambia de color y estilo para destacarla.  
+  - **MARTIN (martin.js)**:
+      - *Carrusel de imágenes*: cambia entre imágenes de películas favoritas con un efecto de desvanecimiento automático.
+  - **PAULA (pau.js)**
+      - Cambio dinámico de fondo: al hacer clic en el botón, el fondo de la sección hero rota entre distintas imágenes.
+      - Interacción de tarjetas: al hacer clic sobre cada pelicula, se resalta con un efecto de agrandamiento y sombra.
+   - **MARIA (maria.js)**
+   - **MICAELA (mica-script.js)**
 
 ## Enlaces
 - **Repositorio GitHub**: [\[link al repo\] ](https://github.com/xxiicode/grupo11-front-ifts-comA) 
