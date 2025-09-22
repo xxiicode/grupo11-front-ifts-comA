@@ -57,11 +57,12 @@ h3,
     rgba(17, 24, 39, 0.95) 0%,
     rgba(17, 24, 39, 0.8) 100%
   );
+
   border-bottom: 1px solid var(--color-borde);
 }
 
 .logo img {
-  height: 36px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -163,14 +164,13 @@ section h2 {
 .tech-list {
   list-style: none;
   margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
   padding: 1rem 0 0.5rem;
-}
+  display: flex;
+  gap: 2rem; 
+ }
+
+
+
 
 .tech-item img {
   width: 44px;
