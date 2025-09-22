@@ -68,3 +68,37 @@ header {
 .navbar a:hover {
     color: #ffff00;
 }
+
+.carrusel {
+    order: 2; /* carrusel a la derecha */
+    width: 350px;
+    height: 500px;
+    background: linear-gradient(135deg, #2d004d, #ff0080); /* fondo mientras carga */
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.contenido {
+    order: 1; /* texto a la izquierda */
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .tarjeta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carrusel, 
+    .contenido {
+        order: initial;
+    }
+
+    #carrusel-img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
