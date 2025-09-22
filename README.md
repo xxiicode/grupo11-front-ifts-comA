@@ -1,13 +1,14 @@
 # grupo11-front-ifts-comA
 
-Grupo 11, 2025, primer semestre, Frontend
+Grupo 11, 2025, Primer semestre, Frontend
 
-INTEGRANTES
-Leandro
-Maria
-Martin
-Micaela
-Paula
+INTEGRANTES:
+
+* Leandro
+* Maria
+* Martin
+* Micaela
+* Paula
 
 ## Descripción del Proyecto
 Este es el **Trabajo Práctico Grupal Nº1** del Grupo 11 (Comisión A, IFTS, Frontend, primer semestre 2025).  
