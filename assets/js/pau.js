@@ -1,11 +1,11 @@
 // Interacción para cambiar el fondo
 const fondos = [
-  "url('assets/img/fondo-tech.png')",  
-  "url('assets/img/fondo-celeste.png')",       
-  "url('assets/img/fondo-verde.png')",
-  "url('assets/img/fondo-rojo.png')",
-  "url('assets/img/fondo-codigo.png')",
-  "url('assets/img/fondo-violeta.png')",  
+  "url('assets/img/fondo-tech.webp')",  
+  "url('assets/img/fondo-celeste.webp')",       
+  "url('assets/img/fondo-verde.webp')",
+  "url('assets/img/fondo-rojo.webp')",
+  "url('assets/img/fondo-codigo.webp')",
+  "url('assets/img/fondo-violeta.webp')",  
 ];
 
 let indice = 0;
