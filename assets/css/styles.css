@@ -166,7 +166,8 @@ section h2 {
   margin: 0;
   padding: 1rem 0 0.5rem;
   display: flex;
-  gap: 2rem; 
+  gap: 2rem;
+  justify-content: center; 
  }
 
 
@@ -301,6 +302,8 @@ section h2 {
   border-radius: 14px;
   background: rgba(17, 24, 39, 0.7);
   border: 1px solid var(--color-borde);
+  padding: 2rem;
+  text-align: left;
 }
 
 /* -------------------------
